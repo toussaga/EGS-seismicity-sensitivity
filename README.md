@@ -77,7 +77,7 @@ Basel Based on Matched Filter Detection and Tailored Post-Processing. Journal of
 
 If you use this code, please cite the paper above and the archived code:
 
-> Toussaint, G., Valley, B., Heinze, T. and Miller, S.A. (2026). EGS-seismicity-sensitivity (version 1.0). Zenodo. https://doi.org/<zenodo-doi>
+> Toussaint, G., Valley, B., Heinze, T. and Miller, S.A. (2026). EGS-seismicity-sensitivity (version 1.0). Zenodo. [![DOI](https://zenodo.org/badge/1439607519.svg)](https://doi.org/10.5281/zenodo.23811851)
 
 ## License
 
