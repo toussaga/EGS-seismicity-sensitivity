@@ -62,18 +62,6 @@ are not included** (see below). Once you have them, place the file in the folder
 
 ---
 
-## Outputs
-
-Each run writes to `OUT_DIR`:
-
-| File | Content |
-|---|---|
-| `Mw_catalog.csv` | event catalogue: time [s], Mw, x, y [m], rupture length [m] |
-| `inj_data.csv` | time series: injected flow rate, well pressure, energy budget, number of failing cells |
-| `*_itXXXXXX.csv`, `*_end.csv` | field snapshots (pressure, permeability, temperature, stresses, plastic strain) |
-
----
-
 ## Data availability
 
 - **Basel injection pressure:** not redistributed here. Source: Häring, M.O., Schanz, U., Ladner, F., Dyer, B.C., 2008. Characterisation of the Basel 1 enhanced geothermal system. Geothermics 37, 469–495. https://doi.org/10.1016/j.geothermics.2008.06.002.
