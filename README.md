@@ -118,10 +118,10 @@ Each run writes to `OUT_DIR`:
 
 - **Basel injection pressure:** not redistributed here. Source: Häring, M.O., Schanz, U., Ladner, F., Dyer, B.C., 2008. Characterisation of the Basel 1 enhanced geothermal system. Geothermics 37, 469–495. doi:10.1016/j.geothermics.2008.06.002..
 - **Basel stress profile:** Valley, B., Evans, K.F., 2019. Stress magnitudes in the Basel enhanced geothermal system. International Journal of Rock Mechanics and Mining
-Sciences 118, 1–20. doi:10.1016/j.ijrmms.2019.03.008.
+Sciences 118, 1–20. https://doi.org/10.1016/j.ijrmms.2019.03.008.
 - **Basel seismic catalogue:** Herrmann, M., Kraft, T., Tormann, T., Scarabello, L., Wiemer, S., 2019. A Consistent High-Resolution Catalog of Induced Seismicity in
 Basel Based on Matched Filter Detection and Tailored Post-Processing. Journal of Geophysical Research: Solid Earth 124, 8449–8477.
-doi:10.1029/2019JB017468.
+[doi:](https://doi.org/10.1029/2019JB017468).
 
 ---
 
