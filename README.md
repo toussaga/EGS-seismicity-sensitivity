@@ -47,58 +47,16 @@ benchmarks/
 - Julia packages (versions pinned in `Project.toml` / `Manifest.toml`): ParallelStencil, CUDA, GPUArrays, CSV, DataFrames, Distributions, LazyArrays, StaticArrays
 
 ---
+### Verification benchmarks
 
-## Running the simulations
-
-### Sensitivity analysis
-
-All scenario parameters are in the `SCENARIO SETTINGS` block at the top of
-`model/model_sensitivity.jl`:
-
-| Parameter | Meaning |
-|---|---|
-| `K_RATIO` | stress ratio k = σxx/σyy (NF: k < 1, SS: k ≈ 1, TF: k > 1) |
-| `FRACTURE_FILE`, `FAMILY_PROPS` | fracture network and fracture hydraulic properties |
-| `FRICTION_ANGLE`, `FAULT_FRICTION_FACTOR` | matrix friction angle; fracture friction angle = factor × matrix angle |
-| `INJ_X`, `INJ_Y1`, `INJ_Y2` | injection interval (position and depths) |
-| `OUT_DIR` | output folder |
-
-### Fracture networks
-
-```bash
-cd networks
-julia --project=.. gen_sensitivity_networks.jl
-```
-
-The script writes one network per stress regime (NF, SS, TF). The networks used in
-the paper are included in `networks/`, because the random number stream can change
-between Julia versions. The parameters of each network set are:
-
-| Set | `LMIN`–`LMAX` (before rescaling) | `L_TARGET` | `ALPHA_PL` | `DMIN` | `SEED` |
-|---|---|---|---|---|---|
-| short06 | <…> | <…> | <…> | <…> | <…> |
-| large06 | <…> | <…> | <…> | <…> | <…> |
-
-Note: lengths are rescaled after sampling to reach the total length `L_TARGET`.
-The script prints the actual length range of each network.
+Requires the following packages:
+- 'benchmark_hydraulic.jl': Printf, LinearAlgebra, Plots, Statistics, ParallelStencil
+- 'benchmark_lauwerier.jl': Printf, LinearAlgebra, Plots, Statistics, SpecialFunctions, ParallelStencil
 
 ### Basel benchmark
 
-`model/model_basel_2d.jl` uses the same model with the Basel domain, stress profile,
-fracture network and measured injection pressure. **The injection pressure data
-are not included** (see below). Once you have them, place the file in `data/`
-and run:
-
-```bash
-cd model
-julia --project=.. model_basel_2d.jl
-```
-
-Without the data file, the script stops with an explanatory message.
-
-### Verification benchmarks
-
-<Short description and how to run the THERMAID example 6 and Lauwerier benchmarks.>
+`model/model_basel_2d.jl` uses the same model with the Basel domain, stress profile, fracture network and measured injection pressure. **The injection pressure data
+are not included** (see below). Once you have them, place the file in the folder and run the code.
 
 ---
 
@@ -116,7 +74,7 @@ Each run writes to `OUT_DIR`:
 
 ## Data availability
 
-- **Basel injection pressure:** not redistributed here. Source: Häring, M.O., Schanz, U., Ladner, F., Dyer, B.C., 2008. Characterisation of the Basel 1 enhanced geothermal system. Geothermics 37, 469–495. [doi:](https://doi.org/10.1016/j.geothermics.2008.06.002) .
+- **Basel injection pressure:** not redistributed here. Source: Häring, M.O., Schanz, U., Ladner, F., Dyer, B.C., 2008. Characterisation of the Basel 1 enhanced geothermal system. Geothermics 37, 469–495. https://doi.org/10.1016/j.geothermics.2008.06.002.
 - **Basel stress profile:** Valley, B., Evans, K.F., 2019. Stress magnitudes in the Basel enhanced geothermal system. International Journal of Rock Mechanics and Mining
 Sciences 118, 1–20. https://doi.org/10.1016/j.ijrmms.2019.03.008.
 - **Basel seismic catalogue:** Herrmann, M., Kraft, T., Tormann, T., Scarabello, L., Wiemer, S., 2019. A Consistent High-Resolution Catalog of Induced Seismicity in
@@ -128,7 +86,7 @@ Basel Based on Matched Filter Detection and Tailored Post-Processing. Journal of
 
 If you use this code, please cite the paper above and the archived code:
 
-> <Authors> (<year>). <repo-name> (version <x.y>). Zenodo. https://doi.org/<zenodo-doi>
+> Toussaint, G., Valley, B., Heinze, T. and Miller, S.A. (2026). EGS-seismicity-sensitivity (version 1.0). Zenodo. https://doi.org/<zenodo-doi>
 
 ## License
 
