@@ -37,8 +37,10 @@ fractures/
 benchmarks/
   benchmark_hydraulic.jl                  hydraulic benchmark
   benchmark_lauwerier.jl                  thermal benchmark
-  model_basel_2d.jl                       main model applied to Basel EGS project             
-
+  model_basel_2d.jl                       main model applied to Basel EGS project
+Manifest.toml
+Project.toml
+```
 ---
 
 ## Requirements
