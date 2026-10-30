@@ -52,12 +52,12 @@ Project.toml
 ### Verification benchmarks
 
 Requires the following packages:
-- 'benchmark_hydraulic.jl': Printf, LinearAlgebra, Plots, Statistics, ParallelStencil
-- 'benchmark_lauwerier.jl': Printf, LinearAlgebra, Plots, Statistics, SpecialFunctions, ParallelStencil
+- `benchmark_hydraulic.jl`: Printf, LinearAlgebra, Plots, Statistics, ParallelStencil
+- `benchmark_lauwerier.jl`: Printf, LinearAlgebra, Plots, Statistics, SpecialFunctions, ParallelStencil
 
 ### Basel benchmark
 
-`model/model_basel_2d.jl` uses the same model with the Basel domain, stress profile, fracture network and measured injection pressure. **The injection pressure data
+`src/model_basel_2d.jl` uses the same model with the Basel domain, stress profile, fracture network and measured injection pressure. **The injection pressure data
 are not included** (see below). Once you have them, place the file in the folder and run the code.
 
 ---
