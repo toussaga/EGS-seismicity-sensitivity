@@ -31,13 +31,14 @@ src/
   plastic_corrector_faults.jl             plasticity, fracture cells
   stimulation_scenarios.jl                injection protocols, injected flow rate
   earthquake_detection.jl                 event detection and magnitudes
+  model_basel_2d.jl                       main model calibrated to Basel EGS project
+  p_input_basel.jl                        function that reads the Basel injection pressure
 fractures/
   gen_frac_networks.jl                    generates the fracture networks
   fractures_*.csv                         networks used in the paper
 benchmarks/
   benchmark_hydraulic.jl                  hydraulic benchmark
   benchmark_lauwerier.jl                  thermal benchmark
-  model_basel_2d.jl                       main model applied to Basel EGS project
 Manifest.toml
 Project.toml
 ```
